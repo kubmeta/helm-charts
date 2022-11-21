@@ -18,9 +18,6 @@ helm repo add kubmeta https://charts.kubmeta.com/
 
 You can then run `helm search repo kubmeta` to see the charts.
 
-<!-- Keep full URL links to repo files because this README syncs from master to gh-pages.  -->
-Chart documentation is available in [KubMeta directory](https://github.com/kubmeta/helm-charts/blob/master/charts/kubmeta/README.md).
-
 
 ## License
 
