@@ -1,0 +1,17 @@
+{{- if .Values.service.enabled -}}
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "kubmeta-lib.fullname" . }}-test-connection"
+  labels:
+    {{- include "kubmeta-lib.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "kubmeta-lib.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: OnFailure
+{{- end }}

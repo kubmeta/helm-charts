@@ -1,0 +1,6 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: {{ include "kubmeta-lib.fullname" . }}
+data:
+  {{- toYaml .Values.config | nindent 2 }}
