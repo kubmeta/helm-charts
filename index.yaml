@@ -2,6 +2,23 @@ apiVersion: v1
 entries:
   kubmeta-lib:
   - apiVersion: v2
+    appVersion: 3.1.10
+    created: "2022-11-21T18:58:39.64323886Z"
+    description: A KubMeta library Helm chart for Kubernetes
+    digest: c3a298556ea73248ffadc59ac69ae4f8d7e929aa7e61e5a9cfa55c250f34f639
+    home: https://kubmeta.com
+    icon: https://raw.githubusercontent.com/kubmeta/helm-charts/master/charts/kubmeta-lib/chart-icon.png
+    maintainers:
+    - email: devops@kubmeta.com
+      name: Kubmeta Maintainers
+    name: kubmeta-lib
+    sources:
+    - https://github.com/kubmeta/helm-charts/tree/master/charts/kubmeta-lib
+    type: application
+    urls:
+    - https://github.com/kubmeta/helm-charts/releases/download/kubmeta-lib-3.1.10/kubmeta-lib-3.1.10.tgz
+    version: 3.1.10
+  - apiVersion: v2
     appVersion: 3.1.9
     created: "2022-11-21T18:27:46.129888543Z"
     description: A KubMeta library Helm chart for Kubernetes
@@ -31,4 +48,4 @@ entries:
     urls:
     - https://github.com/kubmeta/helm-charts/releases/download/kubmeta-lib-3.1.7/kubmeta-lib-3.1.7.tgz
     version: 3.1.7
-generated: "2022-11-21T18:27:46.129897943Z"
+generated: "2022-11-21T18:58:39.64325386Z"
