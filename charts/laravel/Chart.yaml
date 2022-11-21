@@ -1,0 +1,19 @@
+apiVersion: v2
+name: laravel
+description: Helm chart for Laravel applications.
+type: application
+version: 4.2.6
+appVersion: 8.0.0
+home: https://kubmeta.com
+icon: https://raw.githubusercontent.com/kubmeta/helm-charts/master/charts/laravel/chart-icon.png
+sources:
+- https://github.com/kubmeta/helm-charts/tree/master/charts/laravel
+maintainers:
+- name: Kubmeta Maintainers
+  email: devops@kubmeta.com
+keywords:
+  - laravel
+  - php
+  - frameworks
+  - nginx
+  - fpm
