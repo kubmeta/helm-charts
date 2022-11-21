@@ -3,8 +3,8 @@
 ```
 dependencies:
   - name: kubmeta-lib
-    version: 3.1.6
-    repository: https://kubmeta.github.io/helm-charts
+    version: 3.1.7
+    repository: https://charts.kubmeta.com/helm-charts
 ```
 
 ```bash
@@ -99,9 +99,9 @@ Here are 2 examples about this:
 **Alias is not specified, name, version and appVersion are not overridden by parent chart**
 In this case, labels will be like this:\*\*
 
-- `helm.sh/chart: kubmeta-lib-3.1.6 `
+- `helm.sh/chart: kubmeta-lib-3.1.7 `
 - `app.kubernetes.io/name: kubmeta-lib`
-- `app.kubernetes.io/version: 3.1.6 `
+- `app.kubernetes.io/version: 3.1.7 `
 
 Chart.yaml
 
@@ -110,12 +110,12 @@ apiVersion: v2
 name: my-application
 description: My application service description
 type: application
-version: 3.1.6
-appVersion: "3.1.6"
+version: 3.1.7
+appVersion: "3.1.7"
 
 dependencies:
   - name: kubmeta-lib
-    version: 3.1.6
+    version: 3.1.7
     repository: https://kubmeta.github.io/helm-charts
 ```
 
@@ -136,9 +136,9 @@ kubmeta-lib:
 Now if you prefer to change your chart's name and version, you can do it by the alias variable(passing a name to it in Chart.yaml) or you can override the `name` in values.yaml file. The result will be the same. About `version` and `appVersion`, they have to be changed in values.yaml.
 The same labels, given above, now will be:
 
-- `helm.sh/chart: kubmeta-lib-3.1.6`
+- `helm.sh/chart: kubmeta-lib-3.1.7`
 - `app.kubernetes.io/name: kubmeta-lib`
-- `app.kubernetes.io/version: 3.1.6`
+- `app.kubernetes.io/version: 3.1.7`
 
 **This is with the alias name.**
 
@@ -149,12 +149,12 @@ apiVersion: v2
 name: my-application
 description: My application service description
 type: application
-version: 3.1.6
-appVersion: "3.1.6"
+version: 3.1.7
+appVersion: "3.1.7"
 
 dependencies:
   - name: kubmeta-lib
-    version: 3.1.6
+    version: 3.1.7
     repository: https://kubmeta.github.io/helm-charts
     alias: kubmeta-lib
 ```
@@ -163,8 +163,8 @@ values.yaml
 
 ```
 kubmeta-lib:
-  version: 3.1.6
-  appVersion: 3.1.6
+  version: 3.1.7
+  appVersion: 3.1.7
   image:
     repository: docker-image
     tag: 1.2.3
@@ -179,12 +179,12 @@ apiVersion: v2
 name: my-application
 description: My application service description
 type: application
-version: 3.1.6
-appVersion: "3.1.6"
+version: 3.1.7
+appVersion: "3.1.7"
 
 dependencies:
   - name: kubmeta-lib
-    version: 3.1.6
+    version: 3.1.7
     repository: https://kubmeta.github.io/helm-charts
 ```
 
@@ -193,8 +193,8 @@ values.yaml
 ```
 kubmeta-lib:
   name: kubmeta-lib
-  version: 3.1.6
-  appVersion: 3.1.6
+  version: 3.1.7
+  appVersion: 3.1.7
   image:
     repository: docker-image
     tag: 1.2.3
