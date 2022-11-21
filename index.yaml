@@ -70,4 +70,28 @@ entries:
     urls:
     - https://github.com/kubmeta/helm-charts/releases/download/kubmeta-lib-3.1.7/kubmeta-lib-3.1.7.tgz
     version: 3.1.7
-generated: "2022-11-21T19:02:58.911429281Z"
+  laravel:
+  - apiVersion: v2
+    appVersion: 8.0.0
+    created: "2022-11-21T19:34:40.48942882Z"
+    description: Helm chart for Laravel applications.
+    digest: ee98ee930c9acf9968da00e5d6ca5ca2c69aa36ca0d540681f8d349fe7e3038b
+    home: https://kubmeta.com
+    icon: https://raw.githubusercontent.com/kubmeta/helm-charts/master/charts/laravel/chart-icon.png
+    keywords:
+    - laravel
+    - php
+    - frameworks
+    - nginx
+    - fpm
+    maintainers:
+    - email: devops@kubmeta.com
+      name: Kubmeta Maintainers
+    name: laravel
+    sources:
+    - https://github.com/kubmeta/helm-charts/tree/master/charts/laravel
+    type: application
+    urls:
+    - https://github.com/kubmeta/helm-charts/releases/download/laravel-4.2.6/laravel-4.2.6.tgz
+    version: 4.2.6
+generated: "2022-11-21T19:34:40.489446621Z"
