@@ -2,7 +2,7 @@ apiVersion: v2
 name: laravel
 description: Helm chart for Laravel applications.
 type: application
-version: 4.2.6
+version: 4.2.7
 appVersion: 8.0.0
 home: https://kubmeta.com
 icon: https://raw.githubusercontent.com/kubmeta/helm-charts/master/charts/laravel/chart-icon.png
