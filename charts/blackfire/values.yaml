@@ -1,0 +1,23 @@
+replicaCount: 1
+
+image:
+  repository: docker.io/blackfire/blackfire
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 8307
+
+serverId: ~
+serverToken: ~
+logLevel: 1
+existingSecret: {}
+resources: {}
+securityContext: {}
+nodeSelector: {}
+tolerations: []
+affinity: {}

@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "blackfire.fullname" . }}
+  labels: {{- include "blackfire.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels: {{- include "blackfire.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels: {{- include "blackfire.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext: {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: BLACKFIRE_DISABLE_LEGACY_PORT
+              value: "true"
+            - name: BLACKFIRE_SOCKET
+              value: "tcp://0.0.0.0:8307"
+            - name: BLACKFIRE_SERVER_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "blackfire.secret" . | quote }}
+                  key: server_id
+            - name: BLACKFIRE_SERVER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "blackfire.secret" . | quote }}
+                  key: server_token
+            - name: BLACKFIRE_LOG_LEVEL
+              value: {{ .Values.logLevel | default 1 | quote }}
+          ports:
+            - name: agent
+              containerPort: 8307
+              protocol: TCP
+          livenessProbe:
+            tcpSocket:
+              port: agent
+          readinessProbe:
+            tcpSocket:
+              port: agent
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+  {{- end }}

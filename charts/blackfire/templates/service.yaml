@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "blackfire.fullname" . }}
+  labels: {{- include "blackfire.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: agent
+      protocol: TCP
+      name: agent
+  selector: {{- include "blackfire.selectorLabels" . | nindent 4 }}
