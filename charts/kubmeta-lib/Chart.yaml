@@ -2,8 +2,8 @@ apiVersion: v2
 name: kubmeta-lib
 description: A KubMeta library Helm chart for Kubernetes
 type: application
-version: 3.1.11
-appVersion: "3.1.11"
+version: 3.1.12
+appVersion: "3.1.12"
 home: https://kubmeta.com
 icon: https://raw.githubusercontent.com/kubmeta/helm-charts/master/charts/kubmeta-lib/chart-icon.png
 sources:
