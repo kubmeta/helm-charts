@@ -1,5 +1,26 @@
 apiVersion: v1
 entries:
+  blackfire:
+  - apiVersion: v2
+    appVersion: "2"
+    created: "2022-11-26T23:02:29.672747294Z"
+    description: An unofficial Helm chart for Blackfire.io
+    digest: ade7988c0dd5ff48547883c2e88f8f364cca528c79f150f73d1f95427db781df
+    home: https://blackfire.io/
+    icon: https://raw.githubusercontent.com/kubmeta/helm-charts/master/charts/blackfire/chart-icon.jpg
+    keywords:
+    - blackfire
+    - php
+    - profiler
+    maintainers:
+    - email: devops@kubmeta.com
+      name: Kubmeta Maintainers
+    name: blackfire
+    sources:
+    - https://github.com/kubmeta/helm-charts/tree/master/charts/blackfire
+    urls:
+    - https://github.com/kubmeta/helm-charts/releases/download/blackfire-1.7.1/blackfire-1.7.1.tgz
+    version: 1.7.1
   kubmeta-lib:
   - apiVersion: v2
     appVersion: 3.1.12
@@ -139,4 +160,4 @@ entries:
     urls:
     - https://github.com/kubmeta/helm-charts/releases/download/laravel-4.2.6/laravel-4.2.6.tgz
     version: 4.2.6
-generated: "2022-11-26T22:50:16.465135348Z"
+generated: "2022-11-26T23:02:29.672766994Z"
